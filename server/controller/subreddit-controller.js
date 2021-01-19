@@ -4,6 +4,10 @@ import { fetchTopPostsFromSubreddit } from '../util/apiUtil.js';
 import  {filterSubredditListingData } from '../util/apiUtil.js';
 
 export const getTopPostsFromSubreddit = (req, res, next) => {
+    if (subreddit === null) {
+        next(ApiError.badRequest(`Query parameter ${subreddit} cannot be null`));
+        return;
+    }
     var subreddit = req.params.subreddit;
     var timeframe = req.query.timeframe;
     var limit = req.query.limit ? req.query.limit : 25;
