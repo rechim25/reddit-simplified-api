@@ -47,6 +47,7 @@ const filterSubredditTypeT3Data = (t3_post) => {
         console.log("\n" + data.author + " image: " + images_data);
     }
     return {
+        "id": data.name,
         "author":  data.author,
         "title": data.title,
         "text": data.selftext,
