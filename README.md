@@ -56,7 +56,7 @@ Query parameters:
 - `timeframe` = "day" | "now" | "week" | "month" | "year" | "all" (default = "day).
 - `limit`     = integer value greater than 0 (default = 25).
 
-#API Errors:
+# API Errors:
 
 Custom error handling has been implemented using the `/server/error/api-error-handler.js` middleware. 
 
